@@ -54,7 +54,7 @@ clean_docker() {
 }
 
 clean_artifacts() {
-
+    echo hi
 }
 
 # Funktion, um Repositories herunterzuladen
@@ -63,9 +63,11 @@ download() {
 }
 
 build_plugin() {
+    echo hi
 }
 
 install_plugin() {
+    echo hi
 }
 
 # Funktion, um Bootstrap-Patches anzuwenden
@@ -87,13 +89,16 @@ patch_bootstraps() {
 
 # Funktion, um die App zu patchen
 patch_apps() {
+    echo hi
 }
 
 build_termux_x11() {
+    echo hi
 }
 
 
 move_termux_x11_deb() {
+    echo hi
 }
 
 # Funktion, um Bootstraps zu erstellen
@@ -142,12 +147,15 @@ build_bootstraps() {
 
 # Funktion, um Bootstraps zu kopieren
 move_bootstraps() {
+    echo hi
 }
 
 # Funktion, um die App zu bauen
 build_apps() {
+    echo hi
 }
 
 # Funktion, um die APK zu kopieren
 move_apks() {
+    echo hi
 }
