@@ -55,9 +55,11 @@ jobs:
         run: echo "ENABLE_SSH_SERVER=--enable-ssh-server" >> $GITHUB_ENV
       - name: Build Termux
         run: ./build-termux.sh $ADDITIONAL_PACKAGES $TERMUX_APP__PACKAGE_NAME $TERMUX_APP_TYPE $BOOTSTRAP_ARCHITECTURES $DISABLE_BOOTSTRAP_SECOND_STAGE $ENABLE_SSH_SERVER
+      - name: Create tar
+        run: tar cf ./files.tar ./termux-packages-main/output
       - name: Upload artifacts
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4.6.0
         with:
           name: Termux Bootstraps.
-          path: ./termux-packages-main/output/
+          path: ./files.tar
