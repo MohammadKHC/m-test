@@ -54,7 +54,7 @@ clean_docker() {
 }
 
 clean_artifacts() {
-    rm -rf termux* *.apk *.deb *.xz 2>/dev/null
+
 }
 
 # Funktion, um Repositories herunterzuladen
@@ -110,13 +110,13 @@ build_bootstraps() {
 
     if [[ "$TERMUX_APP_TYPE" == "f-droid" ]]; then
         local bootstrap_script="build-bootstraps.sh"
-        local bootstrap_architectures="aarch64,x86_64,arm,i686"
+        local bootstrap_architectures="aarch64"
         if [ -n "${DISABLE_BOOTSTRAP_SECOND_STAGE-}" ]; then
             bootstrap_script_args+=" --disable-bootstrap-second-stage"
         fi
     else
         local bootstrap_script="generate-bootstraps.sh"
-        local bootstrap_architectures="aarch64,x86_64,arm"
+        local bootstrap_architectures="aarch64"
         bootstrap_script_args+=" --build"
     fi
 
